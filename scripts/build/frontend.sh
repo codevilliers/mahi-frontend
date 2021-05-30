@@ -14,4 +14,4 @@ docker run \
     --mount type=bind,src=${CWD},dst=/mahi_care \
     --name ${NAME} \
     mahi-react:latest \
-    yarn build
+    npm run build
