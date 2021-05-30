@@ -31,8 +31,6 @@ import {
   PostCardFooterShareIcon
 } from '../icons/menu'
 import { useParams } from 'react-router-dom'
-
-import { api_base_url } from '../urls'
 import { getCause } from '../actions/CauseActions'
 import { isMobile } from 'react-device-detect'
 
@@ -206,7 +204,7 @@ export default function PostDetailCard (cause) {
               <Avatar
                 src={
                   activeCause.needy_photo
-                    ? api_base_url + activeCause.needy_photo
+                    ? activeCause.needy_photo
                     : ''
                 }
                 className={classes.avatar}
@@ -234,7 +232,7 @@ export default function PostDetailCard (cause) {
           className={classes.img}
           image={
             activeCause.id
-              ? api_base_url + activeCause.benchmark_media[activeStep].media
+              ? activeCause.benchmark_media[activeStep].media
               : ''
           }
           alt='benchmark data'

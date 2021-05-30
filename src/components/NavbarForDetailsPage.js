@@ -9,7 +9,6 @@ import {
 } from '@material-ui/core'
 import { theme } from '../theme'
 import NavbarContent from './Navbar'
-import { api_base_url } from '../urls'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,7 +32,7 @@ export function NavbarForDetailsPage ({ cause }) {
             <CardHeader
               avatar={
                 <Avatar
-                  src={cause.needy_photo ? api_base_url +cause.needy_photo : ''}
+                  src={cause.needy_photo ? cause.needy_photo : ''}
                   className={classes.avatar}
                 >
                 </Avatar>

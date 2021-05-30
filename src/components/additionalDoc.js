@@ -8,7 +8,6 @@ import IconButton from '@material-ui/core/IconButton'
 import StarBorderIcon from '@material-ui/icons/StarBorder'
 import { Typography } from '@material-ui/core'
 
-import { api_base_url } from '../urls'
 import { isMobile } from 'react-device-detect'
 
 const useStyles = makeStyles(theme => ({
@@ -76,7 +75,7 @@ export default function AdditionalDoc () {
     activeCause.media_files.map(file => {
       return (
         <GridListTile key={file.id} className={classes.gridTile}>
-          <img src={api_base_url + file.media} alt='Media' />
+          <img src={file.media} alt='Media' />
           <GridListTileBar
             title={file.media.split('/').pop()}
             classes={{

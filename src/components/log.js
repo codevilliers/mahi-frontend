@@ -27,7 +27,6 @@ import {
 import StarBorderIcon from '@material-ui/icons/StarBorder'
 import SendIcon from '@material-ui/icons/Send'
 
-import { api_base_url } from '../urls'
 import { theme } from '../theme'
 import Comment from './comment'
 import TimeAgo from 'react-timeago'
@@ -232,7 +231,7 @@ function LogTabs () {
           key={donation.id}
           style={{ minHeight: '22.5vw', minWidth: '270px' }}
         >
-          <img src={api_base_url + donation.media} alt='Media' />
+          <img src={donation.media} alt='Media' />
           <GridListTileBar
             title={donation.description}
             classes={{
@@ -260,7 +259,7 @@ function LogTabs () {
             <Avatar
               src={
                 activity.person.user.display_picture
-                  ? api_base_url + activity.person.user.display_picture
+                  ? activity.person.user.display_picture
                   : ''
               }
               // className={classes.avatar}
@@ -288,7 +287,7 @@ function LogTabs () {
             <Avatar
               src={
                 activity.person.user.display_picture
-                  ? api_base_url + activity.person.user.display_picture
+                  ? activity.person.user.display_picture
                   : ''
               }
               // className={classes.avatar}
