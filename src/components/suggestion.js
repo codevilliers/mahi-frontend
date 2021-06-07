@@ -21,7 +21,6 @@ import {
 import TimeAgo from 'react-timeago'
 import { addSuggestion } from '../actions/extraActions'
 import { getMoreSuggestions } from '../actions/CauseActions'
-import { api_base_url } from '../urls'
 import { isMobile } from 'react-device-detect'
 
 const useStyles = makeStyles({
@@ -113,7 +112,7 @@ export default function Suggestions () {
             <Avatar
               src={
                 suggestion.person.display_picture
-                  ? api_base_url + suggestion.person.display_picture
+                  ? suggestion.person.display_picture
                   : ''
               }
               className={classes.avatar}
@@ -139,7 +138,7 @@ export default function Suggestions () {
             <Avatar
               src={
                 suggestion.person.display_picture
-                  ? api_base_url + suggestion.person.display_picture
+                  ? suggestion.person.display_picture
                   : ''
               }
               className={classes.avatar}
